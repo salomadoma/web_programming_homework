@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Главная страница футбольного дашборда KickBoard">
+    <title>KickBoard — Обзор</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+    <aside class="sidebar">
+        <a class="brand" href="index.html">
+            <span class="brand__mark">KB</span>
+            <span class="brand__name">KickBoard</span>
+        </a>
+
+        <nav class="navigation" aria-label="Основная навигация">
+            <ul class="navigation__list">
+                <li>
+                    <a class="navigation__link navigation__link--active"
+                       href="index.html" aria-current="page">
+                        <span class="navigation__icon">⌂</span>
+                        <span class="navigation__text">Обзор</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="navigation__link" href="matches.html">
+                        <span class="navigation__icon">⚽</span>
+                        <span class="navigation__text">Матчи</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="navigation__link" href="standings.html">
+                        <span class="navigation__icon">▤</span>
+                        <span class="navigation__text">Таблица</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="navigation__link" href="match.html">
+                        <span class="navigation__icon">◉</span>
+                        <span class="navigation__text">Матч</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="navigation__link" href="players.html">
+                        <span class="navigation__icon">★</span>
+                        <span class="navigation__text">Игроки</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <p class="sidebar__note">
+        
+        </p>
+    </aside>
+
+    <main class="main">
+        <header class="topbar">
+            <div>
+                <p class="topbar__eyebrow">Футбольный центр</p>
+                <h1 class="topbar__title">Добрый день!</h1>
+            </div>
+
+            <div class="profile">
+                <span class="profile__avatar">С</span>
+                <div class="profile__info">
+                    <p class="profile__name">Семён</p>
+                    <p class="profile__role">Болельщик</p>
+                </div>
+            </div>
+        </header>
+
+        <section class="dashboard-grid" aria-label="Главные матчи">
+            <article class="hero">
+                <div class="hero__content">
+                    <span class="badge badge--green">Скоро начнётся</span>
+                    <p class="hero__subtitle">Лига чемпионов · сегодня, 22:00</p>
+                    <h2 class="hero__title">Главный матч игрового дня</h2>
+
+                    <div class="hero__teams">
+                        <span class="hero__team">Arsenal</span>
+                        <span class="hero__versus">против</span>
+                        <span class="hero__team">Inter</span>
+                    </div>
+
+                    <div class="hero__actions">
+                        <a class="button" href="match.html">Открыть матч</a>
+                        <span class="hero__time">Стадион Emirates</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card live-card">
+                <div class="section-heading">
+                    <h2 class="section-heading__title">Сейчас в эфире</h2>
+                    <span class="badge badge--live">LIVE</span>
+                </div>
+
+                <p class="live-card__stadium">Premier League · London Stadium</p>
+
+                <div class="scoreboard">
+                    <div class="scoreboard__team">
+                        <span class="team-logo team-logo--red">ARS</span>
+                        <span>Arsenal</span>
+                    </div>
+
+                    <div>
+                        <p class="scoreboard__score">2 : 1</p>
+                        <p class="scoreboard__minute">68 минута</p>
+                    </div>
+
+                    <div class="scoreboard__team">
+                        <span class="team-logo team-logo--navy">LIV</span>
+                        <span>Liverpool</span>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="dashboard-grid">
+            <section class="card">
+                <div class="section-heading">
+                    <h2 class="section-heading__title">Последние результаты</h2>
+                    <a class="section-heading__link" href="matches.html">Все матчи</a>
+                </div>
+
+                <div class="match-list">
+                    <article class="match-row">
+                        <time class="match-row__time">Завершён</time>
+                        <div class="match-row__team">
+                            <span class="team-dot team-dot--sky">MCI</span>
+                            Manchester City
+                        </div>
+                        <strong class="match-row__score">3 : 1</strong>
+                        <div class="match-row__team match-row__team--right">
+                            Chelsea
+                            <span class="team-dot team-dot--blue">CHE</span>
+                        </div>
+                    </article>
+
+                    <article class="match-row">
+                        <time class="match-row__time">Завершён</time>
+                        <div class="match-row__team">
+                            <span class="team-dot team-dot--red">MUN</span>
+                            Manchester United
+                        </div>
+                        <strong class="match-row__score">1 : 1</strong>
+                        <div class="match-row__team match-row__team--right">
+                            Tottenham
+                            <span class="team-dot">TOT</span>
+                        </div>
+                    </article>
+
+                    <article class="match-row">
+                        <time class="match-row__time">Завершён</time>
+                        <div class="match-row__team">
+                            <span class="team-dot team-dot--gold">WOL</span>
+                            Wolverhampton
+                        </div>
+                        <strong class="match-row__score">0 : 2</strong>
+                        <div class="match-row__team match-row__team--right">
+                            Newcastle
+                            <span class="team-dot">NEW</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <aside class="card">
+                <div class="section-heading">
+                    <h2 class="section-heading__title">Топ-4</h2>
+                    <a class="section-heading__link" href="standings.html">Таблица</a>
+                </div>
+
+                <div class="table-wrapper">
+                    <table class="standings-table">
+                        <thead>
+                        <tr>
+                            <th>№</th>
+                            <th>Команда</th>
+                            <th>И</th>
+                            <th>О</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="position">1</td>
+                            <td>
+                                <span class="table-team">
+                                    <span class="team-dot team-dot--red">ARS</span>
+                                    Arsenal
+                                </span>
+                            </td>
+                            <td>18</td>
+                            <td><strong>42</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="position">2</td>
+                            <td>
+                                <span class="table-team">
+                                    <span class="team-dot team-dot--sky">MCI</span>
+                                    Man City
+                                </span>
+                            </td>
+                            <td>18</td>
+                            <td><strong>40</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="position">3</td>
+                            <td>
+                                <span class="table-team">
+                                    <span class="team-dot">LIV</span>
+                                    Liverpool
+                                </span>
+                            </td>
+                            <td>18</td>
+                            <td><strong>38</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="position">4</td>
+                            <td>
+                                <span class="table-team">
+                                    <span class="team-dot team-dot--blue">CHE</span>
+                                    Chelsea
+                                </span>
+                            </td>
+                            <td>18</td>
+                            <td><strong>34</strong></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </aside>
+        </section>
+
+        <footer class="footer">
+            KickBoard
+        </footer>
+    </main>
+</div>
+</body>
+</html>

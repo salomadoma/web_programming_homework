@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Расписание футбольных матчей KickBoard">
+    <title>KickBoard — Матчи</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+    <aside class="sidebar">
+        <a class="brand" href="index.html">
+            <span class="brand__mark">KB</span>
+            <span class="brand__name">KickBoard</span>
+        </a>
+
+        <nav class="navigation" aria-label="Основная навигация">
+            <ul class="navigation__list">
+                <li>
+                    <a class="navigation__link" href="index.html">
+                        <span class="navigation__icon">⌂</span>
+                        <span class="navigation__text">Обзор</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="navigation__link navigation__link--active"
+                       href="matches.html"
+                       aria-current="page">
+                        <span class="navigation__icon">⚽</span>
+                        <span class="navigation__text">Матчи</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="navigation__link" href="standings.html">
+                        <span class="navigation__icon">▤</span>
+                        <span class="navigation__text">Таблица</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="navigation__link" href="match.html">
+                        <span class="navigation__icon">◉</span>
+                        <span class="navigation__text">Матч</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="navigation__link" href="players.html">
+                        <span class="navigation__icon">★</span>
+                        <span class="navigation__text">Игроки</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <p class="sidebar__note">
+            Футбольный дашборд
+        </p>
+    </aside>
+
+    <main class="main">
+        <header class="topbar">
+            <div>
+                <p class="topbar__eyebrow">Расписание</p>
+                <h1 class="topbar__title">Матчи</h1>
+            </div>
+
+            <div class="profile">
+                <span class="profile__avatar">С</span>
+                <div class="profile__info">
+                    <p class="profile__name">Семён</p>
+                    <p class="profile__role">Болельщик</p>
+                </div>
+            </div>
+        </header>
+
+        <p class="page-description">
+            Следите за ближайшими играми и результатами завершённых матчей.
+        </p>
+
+        <div class="filters" aria-label="Выбор даты">
+            <button class="filter" type="button">Вчера</button>
+            <button class="filter filter--active" type="button">Сегодня</button>
+            <button class="filter" type="button">Завтра</button>
+            <button class="filter" type="button">Выходные</button>
+        </div>
+
+        <section class="card league">
+            <header class="league__header">
+                <span class="league__logo">PL</span>
+
+                <div>
+                    <h2>Premier League</h2>
+                    <p class="league__country">Англия</p>
+                </div>
+            </header>
+
+            <div class="match-list">
+                <article class="match-row">
+                    <time class="match-row__time">19:30</time>
+
+                    <div class="match-row__team">
+                        <span class="team-dot team-dot--red">ARS</span>
+                        Arsenal
+                    </div>
+
+                    <strong class="match-row__score">— : —</strong>
+
+                    <div class="match-row__team match-row__team--right">
+                        Chelsea
+                        <span class="team-dot team-dot--blue">CHE</span>
+                    </div>
+                </article>
+
+                <article class="match-row">
+                    <time class="match-row__time">21:45</time>
+
+                    <div class="match-row__team">
+                        <span class="team-dot team-dot--sky">MCI</span>
+                        Manchester City
+                    </div>
+
+                    <strong class="match-row__score">— : —</strong>
+
+                    <div class="match-row__team match-row__team--right">
+                        Liverpool
+                        <span class="team-dot">LIV</span>
+                    </div>
+                </article>
+
+                <article class="match-row">
+                    <time class="match-row__time">22:00</time>
+
+                    <div class="match-row__team">
+                        <span class="team-dot">TOT</span>
+                        Tottenham
+                    </div>
+
+                    <strong class="match-row__score">— : —</strong>
+
+                    <div class="match-row__team match-row__team--right">
+                        Newcastle
+                        <span class="team-dot">NEW</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="card league">
+            <header class="league__header">
+                <span class="league__logo">CL</span>
+
+                <div>
+                    <h2>Champions League</h2>
+                    <p class="league__country">Европа</p>
+                </div>
+            </header>
+
+            <div class="match-list">
+                <article class="match-row">
+                    <time class="match-row__time">Завершён</time>
+
+                    <div class="match-row__team">
+                        <span class="team-dot team-dot--gold">RMA</span>
+                        Real Madrid
+                    </div>
+
+                    <strong class="match-row__score">2 : 0</strong>
+
+                    <div class="match-row__team match-row__team--right">
+                        Bayern
+                        <span class="team-dot team-dot--red">BAY</span>
+                    </div>
+                </article>
+
+                <article class="match-row">
+                    <time class="match-row__time">Завершён</time>
+
+                    <div class="match-row__team">
+                        <span class="team-dot team-dot--blue">INT</span>
+                        Inter
+                    </div>
+
+                    <strong class="match-row__score">1 : 1</strong>
+
+                    <div class="match-row__team match-row__team--right">
+                        Barcelona
+                        <span class="team-dot team-dot--red">BAR</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <footer class="footer">
+            KickBoard 
+        </footer>
+    </main>
+</div>
+</body>
+</html>

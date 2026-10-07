@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Статистика футболистов KickBoard">
+    <title>KickBoard — Игроки</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+    <aside class="sidebar">
+        <a class="brand" href="index.html">
+            <span class="brand__mark">KB</span>
+            <span class="brand__name">KickBoard</span>
+        </a>
+
+        <nav class="navigation" aria-label="Основная навигация">
+            <ul class="navigation__list">
+                <li>
+                    <a class="navigation__link" href="index.html">
+                        <span class="navigation__icon">⌂</span>
+                        <span class="navigation__text">Обзор</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="navigation__link" href="matches.html">
+                        <span class="navigation__icon">⚽</span>
+                        <span class="navigation__text">Матчи</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="navigation__link" href="standings.html">
+                        <span class="navigation__icon">▤</span>
+                        <span class="navigation__text">Таблица</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="navigation__link" href="match.html">
+                        <span class="navigation__icon">◉</span>
+                        <span class="navigation__text">Матч</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="navigation__link navigation__link--active"
+                       href="players.html"
+                       aria-current="page">
+                        <span class="navigation__icon">★</span>
+                        <span class="navigation__text">Игроки</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <p class="sidebar__note">
+            Футбольный дашборд
+        </p>
+    </aside>
+
+    <main class="main">
+        <header class="topbar">
+            <div>
+                <p class="topbar__eyebrow">Статистика сезона</p>
+                <h1 class="topbar__title">Лучшие игроки</h1>
+            </div>
+
+            <div class="profile">
+                <span class="profile__avatar">С</span>
+                <div class="profile__info">
+                    <p class="profile__name">Семён</p>
+                    <p class="profile__role">Болельщик</p>
+                </div>
+            </div>
+        </header>
+
+        <p class="page-description">
+            Карточки игроков и индивидуальная статистика.
+            
+        </p>
+
+        <section class="players-grid" aria-label="Список лучших игроков">
+            <article class="player-card">
+                <div class="player-card__photo player-card__photo--one">
+                    <span class="player-card__number">09</span>
+                </div>
+
+                <div class="player-card__content">
+                    <h2 class="player-card__name">Erling Haaland</h2>
+
+                    <p class="player-card__club">
+                        Manchester City · Нападающий
+                    </p>
+
+                    <div class="player-card__stats">
+                        <div class="player-card__stat">
+                            <strong class="player-card__value">18</strong>
+                            <span class="player-card__label">Матчи</span>
+                        </div>
+
+                        <div class="player-card__stat">
+                            <strong class="player-card__value">16</strong>
+                            <span class="player-card__label">Голы</span>
+                        </div>
+
+                        <div class="player-card__stat">
+                            <strong class="player-card__value">4</strong>
+                            <span class="player-card__label">Передачи</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="player-card">
+                <div class="player-card__photo player-card__photo--two">
+                    <span class="player-card__number">11</span>
+                </div>
+
+                <div class="player-card__content">
+                    <h2 class="player-card__name">Mohamed Salah</h2>
+
+                    <p class="player-card__club">
+                        Liverpool · Нападающий
+                    </p>
+
+                    <div class="player-card__stats">
+                        <div class="player-card__stat">
+                            <strong class="player-card__value">18</strong>
+                            <span class="player-card__label">Матчи</span>
+                        </div>
+
+                        <div class="player-card__stat">
+                            <strong class="player-card__value">14</strong>
+                            <span class="player-card__label">Голы</span>
+                        </div>
+
+                        <div class="player-card__stat">
+                            <strong class="player-card__value">7</strong>
+                            <span class="player-card__label">Передачи</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="player-card">
+                <div class="player-card__photo player-card__photo--three">
+                    <span class="player-card__number">07</span>
+                </div>
+
+                <div class="player-card__content">
+                    <h2 class="player-card__name">Bukayo Saka</h2>
+
+                    <p class="player-card__club">
+                        Arsenal · Полузащитник
+                    </p>
+
+                    <div class="player-card__stats">
+                        <div class="player-card__stat">
+                            <strong class="player-card__value">17</strong>
+                            <span class="player-card__label">Матчи</span>
+                        </div>
+
+                        <div class="player-card__stat">
+                            <strong class="player-card__value">11</strong>
+                            <span class="player-card__label">Голы</span>
+                        </div>
+
+                        <div class="player-card__stat">
+                            <strong class="player-card__value">8</strong>
+                            <span class="player-card__label">Передачи</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <footer class="footer">
+            KickBoard
+        </footer>
+    </main>
+</div>
+</body>
+</html>

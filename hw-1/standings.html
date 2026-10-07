@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Турнирная таблица футбольных команд KickBoard">
+    <title>KickBoard — Таблица</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+    <aside class="sidebar">
+        <a class="brand" href="index.html">
+            <span class="brand__mark">KB</span>
+            <span class="brand__name">KickBoard</span>
+        </a>
+
+        <nav class="navigation" aria-label="Основная навигация">
+            <ul class="navigation__list">
+                <li>
+                    <a class="navigation__link" href="index.html">
+                        <span class="navigation__icon">⌂</span>
+                        <span class="navigation__text">Обзор</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="navigation__link" href="matches.html">
+                        <span class="navigation__icon">⚽</span>
+                        <span class="navigation__text">Матчи</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="navigation__link navigation__link--active"
+                       href="standings.html"
+                       aria-current="page">
+                        <span class="navigation__icon">▤</span>
+                        <span class="navigation__text">Таблица</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="navigation__link" href="match.html">
+                        <span class="navigation__icon">◉</span>
+                        <span class="navigation__text">Матч</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="navigation__link" href="players.html">
+                        <span class="navigation__icon">★</span>
+                        <span class="navigation__text">Игроки</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <p class="sidebar__note">
+            Футбольный дашборд  
+        </p>
+    </aside>
+
+    <main class="main">
+        <header class="topbar">
+            <div>
+                <p class="topbar__eyebrow">Premier League</p>
+                <h1 class="topbar__title">Турнирная таблица</h1>
+            </div>
+
+            <div class="profile">
+                <span class="profile__avatar">С</span>
+                <div class="profile__info">
+                    <p class="profile__name">Семён</p>
+                    <p class="profile__role">Болельщик</p>
+                </div>
+            </div>
+        </header>
+
+        <p class="page-description">
+        </p>
+
+        <div class="filters">
+            <button class="filter filter--active" type="button">
+                Premier League
+            </button>
+
+            <button class="filter" type="button">La Liga</button>
+            <button class="filter" type="button">Serie A</button>
+            <button class="filter" type="button">Bundesliga</button>
+        </div>
+
+        <section class="card">
+            <div class="section-heading">
+                <h2 class="section-heading__title">Таблица команд</h2>
+                <span class="badge">18 туров</span>
+            </div>
+
+            <div class="table-wrapper">
+                <table class="standings-table">
+                    <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Команда</th>
+                        <th>И</th>
+                        <th>В</th>
+                        <th>Н</th>
+                        <th>П</th>
+                        <th>Мячи</th>
+                        <th>Форма</th>
+                        <th>О</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr>
+                        <td class="position">1</td>
+                        <td>
+                            <span class="table-team">
+                                <span class="team-dot team-dot--red">ARS</span>
+                                Arsenal
+                            </span>
+                        </td>
+                        <td>18</td>
+                        <td>13</td>
+                        <td>3</td>
+                        <td>2</td>
+                        <td>39–17</td>
+                        <td>
+                            <span class="form">
+                                <span class="form__item">В</span>
+                                <span class="form__item">В</span>
+                                <span class="form__item form__item--draw">Н</span>
+                            </span>
+                        </td>
+                        <td><strong>42</strong></td>
+                    </tr>
+
+                    <tr>
+                        <td class="position">2</td>
+                        <td>
+                            <span class="table-team">
+                                <span class="team-dot team-dot--sky">MCI</span>
+                                Manchester City
+                            </span>
+                        </td>
+                        <td>18</td>
+                        <td>12</td>
+                        <td>4</td>
+                        <td>2</td>
+                        <td>42–19</td>
+                        <td>
+                            <span class="form">
+                                <span class="form__item">В</span>
+                                <span class="form__item">В</span>
+                                <span class="form__item">В</span>
+                            </span>
+                        </td>
+                        <td><strong>40</strong></td>
+                    </tr>
+
+                    <tr>
+                        <td class="position">3</td>
+                        <td>
+                            <span class="table-team">
+                                <span class="team-dot">LIV</span>
+                                Liverpool
+                            </span>
+                        </td>
+                        <td>18</td>
+                        <td>11</td>
+                        <td>5</td>
+                        <td>2</td>
+                        <td>35–18</td>
+                        <td>
+                            <span class="form">
+                                <span class="form__item form__item--draw">Н</span>
+                                <span class="form__item">В</span>
+                                <span class="form__item form__item--loss">П</span>
+                            </span>
+                        </td>
+                        <td><strong>38</strong></td>
+                    </tr>
+
+                    <tr>
+                        <td class="position">4</td>
+                        <td>
+                            <span class="table-team">
+                                <span class="team-dot team-dot--blue">CHE</span>
+                                Chelsea
+                            </span>
+                        </td>
+                        <td>18</td>
+                        <td>10</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>31–22</td>
+                        <td>
+                            <span class="form">
+                                <span class="form__item">В</span>
+                                <span class="form__item form__item--loss">П</span>
+                                <span class="form__item">В</span>
+                            </span>
+                        </td>
+                        <td><strong>34</strong></td>
+                    </tr>
+
+                    <tr>
+                        <td class="position">5</td>
+                        <td>
+                            <span class="table-team">
+                                <span class="team-dot">NEW</span>
+                                Newcastle
+                            </span>
+                        </td>
+                        <td>18</td>
+                        <td>9</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>29–23</td>
+                        <td>
+                            <span class="form">
+                                <span class="form__item form__item--loss">П</span>
+                                <span class="form__item">В</span>
+                                <span class="form__item form__item--draw">Н</span>
+                            </span>
+                        </td>
+                        <td><strong>31</strong></td>
+                    </tr>
+
+                    <tr>
+                        <td class="position">6</td>
+                        <td>
+                            <span class="table-team">
+                                <span class="team-dot">TOT</span>
+                                Tottenham
+                            </span>
+                        </td>
+                        <td>18</td>
+                        <td>8</td>
+                        <td>4</td>
+                        <td>6</td>
+                        <td>28–25</td>
+                        <td>
+                            <span class="form">
+                                <span class="form__item">В</span>
+                                <span class="form__item form__item--draw">Н</span>
+                                <span class="form__item form__item--loss">П</span>
+                            </span>
+                        </td>
+                        <td><strong>28</strong></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <footer class="footer">
+            KickBoard
+        </footer>
+    </main>
+</div>
+</body>
+</html>

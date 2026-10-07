@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Статистика футбольного матча KickBoard">
+    <title>KickBoard — Матч</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+    <aside class="sidebar">
+        <a class="brand" href="index.html">
+            <span class="brand__mark">KB</span>
+            <span class="brand__name">KickBoard</span>
+        </a>
+
+        <nav class="navigation" aria-label="Основная навигация">
+            <ul class="navigation__list">
+                <li>
+                    <a class="navigation__link" href="index.html">
+                        <span class="navigation__icon">⌂</span>
+                        <span class="navigation__text">Обзор</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="navigation__link" href="matches.html">
+                        <span class="navigation__icon">⚽</span>
+                        <span class="navigation__text">Матчи</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="navigation__link" href="standings.html">
+                        <span class="navigation__icon">▤</span>
+                        <span class="navigation__text">Таблица</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="navigation__link navigation__link--active"
+                       href="match.html"
+                       aria-current="page">
+                        <span class="navigation__icon">◉</span>
+                        <span class="navigation__text">Матч</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="navigation__link" href="players.html">
+                        <span class="navigation__icon">★</span>
+                        <span class="navigation__text">Игроки</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <p class="sidebar__note">
+            Футбольный дашборд
+        </p>
+    </aside>
+
+    <main class="main">
+        <header class="topbar">
+            <div>
+                <p class="topbar__eyebrow">Premier League · 18 тур</p>
+                <h1 class="topbar__title">Центр матча</h1>
+            </div>
+
+            <div class="profile">
+                <span class="profile__avatar">С</span>
+                <div class="profile__info">
+                    <p class="profile__name">Семён</p>
+                    <p class="profile__role">Болельщик</p>
+                </div>
+            </div>
+        </header>
+
+        <section class="match-hero">
+            <span class="badge badge--live">LIVE</span>
+
+            <p class="match-hero__meta">
+                Emirates Stadium · 68 минута
+            </p>
+
+            <div class="match-score">
+                <div class="match-score__team">
+                    <span class="team-logo team-logo--red">ARS</span>
+                    <span>Arsenal</span>
+                </div>
+
+                <div>
+                    <p class="match-score__number">2 : 1</p>
+                    <p class="match-score__status">Второй тайм</p>
+                </div>
+
+                <div class="match-score__team">
+                    <span class="team-logo team-logo--navy">LIV</span>
+                    <span>Liverpool</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="match-content">
+            <section class="card">
+                <div class="section-heading">
+                    <h2 class="section-heading__title">События матча</h2>
+                    <span class="badge">Обновлено сейчас</span>
+                </div>
+
+                <ol class="timeline">
+                    <li class="timeline__item">
+                        <span class="timeline__minute">12′</span>
+
+                        <p class="timeline__event">
+                            <strong>Гол Arsenal.</strong>
+                            Быстрая атака через правый фланг.
+                        </p>
+                    </li>
+
+                    <li class="timeline__item">
+                        <span class="timeline__minute">31′</span>
+
+                        <p class="timeline__event">
+                            <strong>Жёлтая карточка Liverpool.</strong>
+                            Нарушение в центре поля.
+                        </p>
+                    </li>
+
+                    <li class="timeline__item">
+                        <span class="timeline__minute">44′</span>
+
+                        <p class="timeline__event">
+                            <strong>Гол Liverpool.</strong>
+                            Точный удар из штрафной.
+                        </p>
+                    </li>
+
+                    <li class="timeline__item">
+                        <span class="timeline__minute">57′</span>
+
+                        <p class="timeline__event">
+                            <strong>Гол Arsenal.</strong>
+                            Счёт становится 2:1.
+                        </p>
+                    </li>
+
+                    <li class="timeline__item">
+                        <span class="timeline__minute">65′</span>
+
+                        <p class="timeline__event">
+                            Замена в составе Arsenal.
+                        </p>
+                    </li>
+                </ol>
+            </section>
+
+            <aside class="card">
+                <div class="section-heading">
+                    <h2 class="section-heading__title">Статистика</h2>
+                </div>
+
+                <div class="statistics">
+                    <div class="statistic">
+                        <div class="statistic__values">
+                            <span>58%</span>
+                            <span class="statistic__name">Владение</span>
+                            <span>42%</span>
+                        </div>
+
+                        <div class="statistic__track">
+                            <span class="statistic__home statistic__home--58"></span>
+                            <span class="statistic__away"></span>
+                        </div>
+                    </div>
+
+                    <div class="statistic">
+                        <div class="statistic__values">
+                            <span>7</span>
+                            <span class="statistic__name">Удары в створ</span>
+                            <span>8</span>
+                        </div>
+
+                        <div class="statistic__track">
+                            <span class="statistic__home statistic__home--47"></span>
+                            <span class="statistic__away"></span>
+                        </div>
+                    </div>
+
+                    <div class="statistic">
+                        <div class="statistic__values">
+                            <span>5</span>
+                            <span class="statistic__name">Угловые</span>
+                            <span>3</span>
+                        </div>
+
+                        <div class="statistic__track">
+                            <span class="statistic__home statistic__home--62"></span>
+                            <span class="statistic__away"></span>
+                        </div>
+                    </div>
+
+                    <div class="statistic">
+                        <div class="statistic__values">
+                            <span>6</span>
+                            <span class="statistic__name">Фолы</span>
+                            <span>9</span>
+                        </div>
+
+                        <div class="statistic__track">
+                            <span class="statistic__home statistic__home--40"></span>
+                            <span class="statistic__away"></span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <footer class="footer">
+            KickBoard · Страница матча
+        </footer>
+    </main>
+</div>
+</body>
+</html>
