@@ -7,7 +7,7 @@
     <title>KickBoard — Игроки</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body data-page="players">
 <div class="app">
     <aside class="sidebar">
         <a class="brand" href="index.html">
@@ -82,7 +82,23 @@
             
         </p>
 
-        <section class="players-grid" aria-label="Список лучших игроков">
+        <form class="search-form" data-js="player-search-form">
+            <label class="search-form__label" for="player-search">Поиск игрока или клуба</label>
+            <div class="search-form__row">
+                <input
+                    class="search-form__input"
+                    id="player-search"
+                    type="search"
+                    placeholder="Например, Arsenal"
+                    autocomplete="off"
+                    data-js="player-search-input"
+                >
+                <button class="button search-form__button" type="submit">Найти</button>
+            </div>
+            <p class="search-form__message" aria-live="polite" data-js="player-search-message"></p>
+        </form>
+
+        <section class="players-grid" aria-label="Список лучших игроков" data-js="players-list">
             <article class="player-card">
                 <div class="player-card__photo player-card__photo--one">
                     <span class="player-card__number">09</span>
@@ -182,5 +198,6 @@
         </footer>
     </main>
 </div>
+<script type="module" src="js/app.js"></script>
 </body>
 </html>

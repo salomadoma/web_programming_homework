@@ -7,7 +7,7 @@
     <title>KickBoard — Матчи</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body data-page="matches">
 <div class="app">
     <aside class="sidebar">
         <a class="brand" href="index.html">
@@ -82,12 +82,13 @@
         </p>
 
         <div class="filters" aria-label="Выбор даты">
-            <button class="filter" type="button">Вчера</button>
-            <button class="filter filter--active" type="button">Сегодня</button>
-            <button class="filter" type="button">Завтра</button>
-            <button class="filter" type="button">Выходные</button>
+            <button class="filter" type="button" data-match-filter="yesterday">Вчера</button>
+            <button class="filter filter--active" type="button" data-match-filter="today">Сегодня</button>
+            <button class="filter" type="button" data-match-filter="tomorrow">Завтра</button>
+            <button class="filter" type="button" data-match-filter="all">Все</button>
         </div>
 
+        <div data-js="matches-list">
         <section class="card league">
             <header class="league__header">
                 <span class="league__logo">PL</span>
@@ -193,11 +194,13 @@
                 </article>
             </div>
         </section>
+        </div>
 
         <footer class="footer">
             KickBoard 
         </footer>
     </main>
 </div>
+<script type="module" src="js/app.js"></script>
 </body>
 </html>
