@@ -7,7 +7,7 @@
     <title>KickBoard — Таблица</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body data-page="standings">
 <div class="app">
     <aside class="sidebar">
         <a class="brand" href="index.html">
@@ -90,6 +90,21 @@
             <button class="filter" type="button">Bundesliga</button>
         </div>
 
+        <form class="search-form" data-js="team-search-form">
+            <label class="search-form__label" for="team-search">Поиск команды</label>
+            <div class="search-form__row">
+                <input
+                    class="search-form__input"
+                    id="team-search"
+                    type="search"
+                    placeholder="Например, Arsenal"
+                    autocomplete="off"
+                    data-js="team-search-input"
+                >
+                <button class="button search-form__button" type="submit">Найти</button>
+            </div>
+        </form>
+
         <section class="card">
             <div class="section-heading">
                 <h2 class="section-heading__title">Таблица команд</h2>
@@ -112,7 +127,7 @@
                     </tr>
                     </thead>
 
-                    <tbody>
+                    <tbody data-js="standings-body">
                     <tr>
                         <td class="position">1</td>
                         <td>
@@ -260,5 +275,6 @@
         </footer>
     </main>
 </div>
+<script type="module" src="js/app.js"></script>
 </body>
 </html>

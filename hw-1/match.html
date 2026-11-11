@@ -7,7 +7,7 @@
     <title>KickBoard — Матч</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body data-page="match">
 <div class="app">
     <aside class="sidebar">
         <a class="brand" href="index.html">
@@ -80,6 +80,15 @@
         <section class="match-hero">
             <span class="badge badge--live">LIVE</span>
 
+            <button
+                class="favorite-button"
+                type="button"
+                aria-pressed="false"
+                data-js="favorite-button"
+            >
+                ☆ Добавить в избранное
+            </button>
+
             <p class="match-hero__meta">
                 Emirates Stadium · 68 минута
             </p>
@@ -109,7 +118,7 @@
                     <span class="badge">Обновлено сейчас</span>
                 </div>
 
-                <ol class="timeline">
+                <ol class="timeline" data-js="timeline">
                     <li class="timeline__item">
                         <span class="timeline__minute">12′</span>
 
@@ -222,5 +231,6 @@
         </footer>
     </main>
 </div>
+<script type="module" src="js/app.js"></script>
 </body>
 </html>

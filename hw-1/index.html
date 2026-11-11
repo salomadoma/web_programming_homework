@@ -7,7 +7,7 @@
     <title>KickBoard — Обзор</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body data-page="dashboard">
 <div class="app">
     <aside class="sidebar">
         <a class="brand" href="index.html">
@@ -126,7 +126,7 @@
                     <a class="section-heading__link" href="matches.html">Все матчи</a>
                 </div>
 
-                <div class="match-list">
+                <div class="match-list" data-js="recent-matches">
                     <article class="match-row">
                         <time class="match-row__time">Завершён</time>
                         <div class="match-row__team">
@@ -240,5 +240,6 @@
         </footer>
     </main>
 </div>
+<script type="module" src="js/app.js"></script>
 </body>
 </html>
