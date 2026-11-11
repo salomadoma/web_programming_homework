@@ -1,4 +1,5 @@
 import { matches, matchEvents, players, standings } from "./data.js";
+import { initFavorites, refreshFavorites } from "./favorites.js";
 import {
     renderMatchGroups,
     renderMatchRows,
@@ -25,7 +26,8 @@ function initMatches() {
             ? matches
             : matches.filter((match) => match.day === filter);
 
-        renderMatchGroups(container, filteredMatches);
+        renderMatchGroups(container, filteredMatches, { withFavorites: true });
+        refreshFavorites();
     };
 
     buttons.forEach((button) => {
@@ -64,20 +66,8 @@ function initStandings() {
 
 function initMatch() {
     const timeline = document.querySelector('[data-js="timeline"]');
-    const favoriteButton = document.querySelector('[data-js="favorite-button"]');
-    if (!timeline || !favoriteButton) return;
-
-    let isFavorite = false;
+    if (!timeline) return;
     renderTimeline(timeline, matchEvents);
-
-    favoriteButton.addEventListener("click", () => {
-        isFavorite = !isFavorite;
-        favoriteButton.classList.toggle("favorite-button--active", isFavorite);
-        favoriteButton.setAttribute("aria-pressed", String(isFavorite));
-        favoriteButton.textContent = isFavorite
-            ? "★ Матч в избранном"
-            : "☆ Добавить в избранное";
-    });
 }
 
 function initPlayers() {
@@ -119,3 +109,4 @@ const pageInitializers = {
 
 const currentPage = document.body.dataset.page;
 pageInitializers[currentPage]?.();
+initFavorites();

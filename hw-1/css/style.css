@@ -179,6 +179,7 @@ button {
 }
 
 .card {
+    min-width: 0;
     padding: 22px;
     background: var(--color-surface);
     border: 1px solid var(--color-border);
@@ -900,6 +901,68 @@ button {
     padding: 28px 16px;
     color: var(--color-muted);
     text-align: center;
+}
+
+/* Избранные матчи и сообщения Local Storage API */
+
+.favorites-panel {
+    margin-top: 22px;
+}
+
+.favorites-panel__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.match-row__actions {
+    grid-column: 2 / -1;
+}
+
+.favorite-toggle {
+    padding: 9px 13px;
+    color: var(--color-text);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    font: inherit;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.favorite-toggle:hover:not(:disabled),
+.favorite-toggle.favorite-button--active {
+    background: var(--color-yellow);
+    border-color: var(--color-yellow);
+}
+
+.favorite-toggle:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.favorite-toggle:focus-visible,
+.favorite-button:focus-visible {
+    outline: 3px solid var(--color-blue);
+    outline-offset: 3px;
+}
+
+.storage-message {
+    margin-bottom: 22px;
+    padding: 12px 16px;
+    color: var(--color-text);
+    background: var(--color-surface);
+    border-left: 4px solid var(--color-green);
+    border-radius: 8px;
+    line-height: 1.5;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.storage-message--error {
+    border-color: var(--color-accent);
 }
 
 /* Планшеты */

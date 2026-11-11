@@ -24,7 +24,7 @@ function createTeam(team, isRight = false) {
     return element;
 }
 
-export function renderMatchRows(container, matchItems) {
+export function renderMatchRows(container, matchItems, { withFavorites = false } = {}) {
     container.replaceChildren();
 
     if (matchItems.length === 0) {
@@ -54,11 +54,25 @@ export function renderMatchRows(container, matchItems) {
             createTeam(match.away, true),
         );
 
+        if (withFavorites) {
+            const actions = document.createElement("div");
+            actions.className = "match-row__actions";
+            const button = document.createElement("button");
+            button.type = "button";
+            button.className = "favorite-toggle";
+            button.dataset.favoriteId = match.id;
+            button.dataset.matchName = `${match.home.name} — ${match.away.name}`;
+            button.textContent = "☆ В избранное";
+            button.setAttribute("aria-pressed", "false");
+            actions.append(button);
+            article.append(actions);
+        }
+
         container.append(article);
     });
 }
 
-export function renderMatchGroups(container, matchItems) {
+export function renderMatchGroups(container, matchItems, options = {}) {
     container.replaceChildren();
 
     if (matchItems.length === 0) {
@@ -94,7 +108,7 @@ export function renderMatchGroups(container, matchItems) {
 
         const list = document.createElement("div");
         list.className = "match-list";
-        renderMatchRows(list, leagueMatches);
+        renderMatchRows(list, leagueMatches, options);
 
         header.append(logo, info);
         section.append(header, list);
