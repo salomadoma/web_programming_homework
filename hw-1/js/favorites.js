@@ -36,14 +36,19 @@ export function refreshFavorites() {
 }
 
 export function initFavorites() {
-    if (!document.querySelector('[data-favorite-id], [data-js="favorites-list"]')) return;
+    if (!["dashboard", "matches", "match"].includes(document.body.dataset.page)) return;
 
     const loaded = readFavorites(validIds);
     favoriteIds = loaded.ids;
     statusMessage = document.createElement("p");
     statusMessage.className = "storage-message";
     statusMessage.setAttribute("role", "status");
-    document.querySelector(".topbar").after(statusMessage);
+    const topbar = document.querySelector(".topbar");
+    if (topbar) {
+        topbar.after(statusMessage);
+    } else {
+        document.querySelector(".main")?.prepend(statusMessage);
+    }
 
     function showMessage(message, isError = false) {
         statusMessage.textContent = message;

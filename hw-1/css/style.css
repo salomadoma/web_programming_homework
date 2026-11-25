@@ -751,7 +751,7 @@ button {
     padding: 18px;
     color: #ffffff;
     background-color: #273638;
-    background-position: center;
+    background-position: center 20%;
     background-size: cover;
 }
 
