@@ -179,6 +179,7 @@ button {
 }
 
 .card {
+    min-width: 0;
     padding: 22px;
     background: var(--color-surface);
     border: 1px solid var(--color-border);
@@ -750,7 +751,7 @@ button {
     padding: 18px;
     color: #ffffff;
     background-color: #273638;
-    background-position: center;
+    background-position: center 20%;
     background-size: cover;
 }
 

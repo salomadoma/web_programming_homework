@@ -102,13 +102,13 @@ export function renderMatchGroups(container, matchItems) {
     });
 }
 
-export function renderStandings(tableBody, teams) {
+export function renderStandings(tableBody, teams, { compact = false } = {}) {
     tableBody.replaceChildren();
 
     if (teams.length === 0) {
         const row = document.createElement("tr");
         const cell = document.createElement("td");
-        cell.colSpan = 9;
+        cell.colSpan = compact ? 4 : 9;
         cell.className = "empty-state";
         cell.textContent = "Команда не найдена";
         row.append(cell);
@@ -118,11 +118,13 @@ export function renderStandings(tableBody, teams) {
 
     teams.forEach((team) => {
         const row = document.createElement("tr");
-        const values = [team.position, team.games, team.wins, team.draws, team.losses, team.goals];
+        const values = compact
+            ? [team.games]
+            : [team.games, team.wins, team.draws, team.losses, team.goals];
 
         const position = document.createElement("td");
         position.className = "position";
-        position.textContent = values.shift();
+        position.textContent = team.position;
 
         const teamCell = document.createElement("td");
         const teamName = document.createElement("span");
@@ -159,7 +161,8 @@ export function renderStandings(tableBody, teams) {
         pointsValue.textContent = team.points;
         points.append(pointsValue);
 
-        row.append(formCell, points);
+        if (!compact) row.append(formCell);
+        row.append(points);
         tableBody.append(row);
     });
 }

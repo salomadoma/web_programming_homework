@@ -6,13 +6,20 @@ import {
     renderStandings,
     renderTimeline,
 } from "./ui.js";
+import { leagues } from "./data.js";
 
 function initDashboard() {
     const recentMatches = document.querySelector('[data-js="recent-matches"]');
-    if (!recentMatches) return;
+    if (recentMatches) {
+        const completedMatches = matches.filter((match) => match.score !== null).slice(0, 3);
+        renderMatchRows(recentMatches, completedMatches);
+    }
 
-    const completedMatches = matches.filter((match) => match.score !== null).slice(0, 3);
-    renderMatchRows(recentMatches, completedMatches);
+    const topTeams = document.querySelector('[data-js="top-teams"]');
+    if (topTeams) {
+        const leaders = [...standings].sort((a, b) => b.points - a.points).slice(0, 4);
+        renderStandings(topTeams, leaders, { compact: true });
+    }
 }
 
 function initMatches() {
@@ -43,11 +50,14 @@ function initStandings() {
     const tableBody = document.querySelector('[data-js="standings-body"]');
     const form = document.querySelector('[data-js="team-search-form"]');
     const input = document.querySelector('[data-js="team-search-input"]');
+    const leagueButtons = document.querySelectorAll("[data-league-id]");
+    const leagueTitle = document.querySelector('[data-js="standings-league"]');
     if (!tableBody || !form || !input) return;
+    let activeLeague = leagues[0];
 
     const filterTeams = () => {
         const query = input.value.trim().toLowerCase();
-        const filteredTeams = standings.filter((team) =>
+        const filteredTeams = activeLeague.teams.filter((team) =>
             team.name.toLowerCase().includes(query),
         );
         renderStandings(tableBody, filteredTeams);
@@ -59,7 +69,21 @@ function initStandings() {
     });
 
     input.addEventListener("input", filterTeams);
-    renderStandings(tableBody, standings);
+    leagueButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            const selectedLeague = leagues.find((league) => league.id === button.dataset.leagueId);
+            if (!selectedLeague) return;
+            activeLeague = selectedLeague;
+            leagueButtons.forEach((item) => {
+                const selected = item === button;
+                item.classList.toggle("filter--active", selected);
+                item.setAttribute("aria-pressed", String(selected));
+            });
+            if (leagueTitle) leagueTitle.textContent = activeLeague.name;
+            filterTeams();
+        });
+    });
+    filterTeams();
 }
 
 function initMatch() {
