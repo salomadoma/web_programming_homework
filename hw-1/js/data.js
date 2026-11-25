@@ -1,3 +1,12 @@
+// Матч, показанный на странице «Центр матча».
+export const featuredMatch = {
+    id: 8,
+    time: "68 минута",
+    home: { name: "Arsenal", code: "ARS", color: "red" },
+    away: { name: "Liverpool", code: "LIV", color: "dark" },
+    score: "2 : 1",
+};
+
 export const matches = [
     {
         id: 1,
