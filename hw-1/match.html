@@ -7,7 +7,7 @@
     <title>KickBoard — Матч</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body data-page="match">
 <div class="app">
     <aside class="sidebar">
         <a class="brand" href="index.html">
@@ -80,6 +80,15 @@
         <section class="match-hero">
             <span class="badge badge--live">LIVE</span>
 
+            <button
+                class="favorite-button"
+                type="button"
+                aria-pressed="false"
+                data-js="favorite-button"
+            >
+                ☆ Добавить в избранное
+            </button>
+
             <p class="match-hero__meta">
                 Emirates Stadium · 68 минута
             </p>
@@ -109,51 +118,7 @@
                     <span class="badge">Обновлено сейчас</span>
                 </div>
 
-                <ol class="timeline">
-                    <li class="timeline__item">
-                        <span class="timeline__minute">12′</span>
-
-                        <p class="timeline__event">
-                            <strong>Гол Arsenal.</strong>
-                            Быстрая атака через правый фланг.
-                        </p>
-                    </li>
-
-                    <li class="timeline__item">
-                        <span class="timeline__minute">31′</span>
-
-                        <p class="timeline__event">
-                            <strong>Жёлтая карточка Liverpool.</strong>
-                            Нарушение в центре поля.
-                        </p>
-                    </li>
-
-                    <li class="timeline__item">
-                        <span class="timeline__minute">44′</span>
-
-                        <p class="timeline__event">
-                            <strong>Гол Liverpool.</strong>
-                            Точный удар из штрафной.
-                        </p>
-                    </li>
-
-                    <li class="timeline__item">
-                        <span class="timeline__minute">57′</span>
-
-                        <p class="timeline__event">
-                            <strong>Гол Arsenal.</strong>
-                            Счёт становится 2:1.
-                        </p>
-                    </li>
-
-                    <li class="timeline__item">
-                        <span class="timeline__minute">65′</span>
-
-                        <p class="timeline__event">
-                            Замена в составе Arsenal.
-                        </p>
-                    </li>
-                </ol>
+                <ol class="timeline" data-js="timeline"></ol>
             </section>
 
             <aside class="card">
@@ -222,5 +187,6 @@
         </footer>
     </main>
 </div>
+<script type="module" src="js/app.js"></script>
 </body>
 </html>

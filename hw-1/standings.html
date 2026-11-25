@@ -7,7 +7,7 @@
     <title>KickBoard — Таблица</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body data-page="standings">
 <div class="app">
     <aside class="sidebar">
         <a class="brand" href="index.html">
@@ -64,7 +64,7 @@
     <main class="main">
         <header class="topbar">
             <div>
-                <p class="topbar__eyebrow">Premier League</p>
+                <p class="topbar__eyebrow" data-js="standings-league">Premier League</p>
                 <h1 class="topbar__title">Турнирная таблица</h1>
             </div>
 
@@ -80,15 +80,27 @@
         <p class="page-description">
         </p>
 
-        <div class="filters">
-            <button class="filter filter--active" type="button">
-                Premier League
-            </button>
-
-            <button class="filter" type="button">La Liga</button>
-            <button class="filter" type="button">Serie A</button>
-            <button class="filter" type="button">Bundesliga</button>
+        <div class="filters" aria-label="Выбор лиги">
+            <button class="filter filter--active" type="button" data-league-id="premier-league" aria-pressed="true">Premier League</button>
+            <button class="filter" type="button" data-league-id="la-liga" aria-pressed="false">La Liga</button>
+            <button class="filter" type="button" data-league-id="serie-a" aria-pressed="false">Serie A</button>
+            <button class="filter" type="button" data-league-id="bundesliga" aria-pressed="false">Bundesliga</button>
         </div>
+
+        <form class="search-form" data-js="team-search-form">
+            <label class="search-form__label" for="team-search">Поиск команды</label>
+            <div class="search-form__row">
+                <input
+                    class="search-form__input"
+                    id="team-search"
+                    type="search"
+                    placeholder="Например, Arsenal"
+                    autocomplete="off"
+                    data-js="team-search-input"
+                >
+                <button class="button search-form__button" type="submit">Найти</button>
+            </div>
+        </form>
 
         <section class="card">
             <div class="section-heading">
@@ -112,145 +124,7 @@
                     </tr>
                     </thead>
 
-                    <tbody>
-                    <tr>
-                        <td class="position">1</td>
-                        <td>
-                            <span class="table-team">
-                                <span class="team-dot team-dot--red">ARS</span>
-                                Arsenal
-                            </span>
-                        </td>
-                        <td>18</td>
-                        <td>13</td>
-                        <td>3</td>
-                        <td>2</td>
-                        <td>39–17</td>
-                        <td>
-                            <span class="form">
-                                <span class="form__item">В</span>
-                                <span class="form__item">В</span>
-                                <span class="form__item form__item--draw">Н</span>
-                            </span>
-                        </td>
-                        <td><strong>42</strong></td>
-                    </tr>
-
-                    <tr>
-                        <td class="position">2</td>
-                        <td>
-                            <span class="table-team">
-                                <span class="team-dot team-dot--sky">MCI</span>
-                                Manchester City
-                            </span>
-                        </td>
-                        <td>18</td>
-                        <td>12</td>
-                        <td>4</td>
-                        <td>2</td>
-                        <td>42–19</td>
-                        <td>
-                            <span class="form">
-                                <span class="form__item">В</span>
-                                <span class="form__item">В</span>
-                                <span class="form__item">В</span>
-                            </span>
-                        </td>
-                        <td><strong>40</strong></td>
-                    </tr>
-
-                    <tr>
-                        <td class="position">3</td>
-                        <td>
-                            <span class="table-team">
-                                <span class="team-dot">LIV</span>
-                                Liverpool
-                            </span>
-                        </td>
-                        <td>18</td>
-                        <td>11</td>
-                        <td>5</td>
-                        <td>2</td>
-                        <td>35–18</td>
-                        <td>
-                            <span class="form">
-                                <span class="form__item form__item--draw">Н</span>
-                                <span class="form__item">В</span>
-                                <span class="form__item form__item--loss">П</span>
-                            </span>
-                        </td>
-                        <td><strong>38</strong></td>
-                    </tr>
-
-                    <tr>
-                        <td class="position">4</td>
-                        <td>
-                            <span class="table-team">
-                                <span class="team-dot team-dot--blue">CHE</span>
-                                Chelsea
-                            </span>
-                        </td>
-                        <td>18</td>
-                        <td>10</td>
-                        <td>4</td>
-                        <td>4</td>
-                        <td>31–22</td>
-                        <td>
-                            <span class="form">
-                                <span class="form__item">В</span>
-                                <span class="form__item form__item--loss">П</span>
-                                <span class="form__item">В</span>
-                            </span>
-                        </td>
-                        <td><strong>34</strong></td>
-                    </tr>
-
-                    <tr>
-                        <td class="position">5</td>
-                        <td>
-                            <span class="table-team">
-                                <span class="team-dot">NEW</span>
-                                Newcastle
-                            </span>
-                        </td>
-                        <td>18</td>
-                        <td>9</td>
-                        <td>4</td>
-                        <td>5</td>
-                        <td>29–23</td>
-                        <td>
-                            <span class="form">
-                                <span class="form__item form__item--loss">П</span>
-                                <span class="form__item">В</span>
-                                <span class="form__item form__item--draw">Н</span>
-                            </span>
-                        </td>
-                        <td><strong>31</strong></td>
-                    </tr>
-
-                    <tr>
-                        <td class="position">6</td>
-                        <td>
-                            <span class="table-team">
-                                <span class="team-dot">TOT</span>
-                                Tottenham
-                            </span>
-                        </td>
-                        <td>18</td>
-                        <td>8</td>
-                        <td>4</td>
-                        <td>6</td>
-                        <td>28–25</td>
-                        <td>
-                            <span class="form">
-                                <span class="form__item">В</span>
-                                <span class="form__item form__item--draw">Н</span>
-                                <span class="form__item form__item--loss">П</span>
-                            </span>
-                        </td>
-                        <td><strong>28</strong></td>
-                    </tr>
-                    </tbody>
+                    <tbody data-js="standings-body"></tbody>
                 </table>
             </div>
         </section>
@@ -260,5 +134,6 @@
         </footer>
     </main>
 </div>
+<script type="module" src="js/app.js"></script>
 </body>
 </html>
